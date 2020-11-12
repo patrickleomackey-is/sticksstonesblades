@@ -1,4 +1,4 @@
- losses =[];ties =[]; wins=[];
+
 function cpThrow(){ 
     
     
@@ -16,7 +16,7 @@ function cpThrow(){
     return CPU;
     }
     
-    document.addEventListener('submit',cpThrow()).write("W  "+ wins+ "L " +losses+ "T  "+ ties);
+    //document.addEventListener('onload',cpThrow());
     
 
 
@@ -26,7 +26,7 @@ function cpThrow(){
 
 function PlayTheGame() {
 //declare variables to hold the player choice and the computer choice
-
+ losses =[];ties =[]; wins=[];
 var userThrow = document.getElementsByName("choice");
 
 for (i =0;i < userThrow.length; i++){
@@ -53,14 +53,17 @@ crushed by the opponent's "+CPU);++losses;}
     
 else if (urChoice ==="Scissors"&& CPU ==="Paper"){alert("Your "+urChoice+" chops up \n\
 the opponent's "+CPU);++wins;}    
-    
-    document.write("<br>W's "+wins+"<br>Ties "+ties+"<br>L's "+losses);
+
+
+
+document.addEventListener('submit').write('<br>'+wins+"<br>"+losses+"<br>"+ties);
+//    document.write("<br>W's "+wins+"<br>Ties "+ties+"<br>L's "+losses);
 //use getElementsByName to get the form radio button values
 //loop through the array to find which one is checked
 //store the checked radio button's value in the variable for player choice
 
 
-    
+
 //Call the generateComputerChoice function and store the returned value
 //in the variable for computer choice
 
