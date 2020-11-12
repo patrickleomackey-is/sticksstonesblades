@@ -52,7 +52,7 @@ else if (urChoice ==="Scissors"&& CPU ==="Rock"){alert("Your "+urChoice+" was \n
 crushed by the opponent's "+CPU);++losses;}
     
 else if (urChoice ==="Scissors"&& CPU ==="Paper"){alert("Your "+urChoice+" chops up \n\
-your opponent's "+CPU);++wins;}    
+the opponent's "+CPU);++wins;}    
     
     document.write("<br>W's "+wins+"<br>Ties "+ties+"<br>L's "+losses);
 //use getElementsByName to get the form radio button values
