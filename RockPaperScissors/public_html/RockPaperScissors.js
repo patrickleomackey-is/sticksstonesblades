@@ -6,17 +6,17 @@ function cpThrow(){
     
     if (Random === 0){
          CPU = "Rock";
-        document.write("It threw a " + CPU);
+        //document.write("It threw a " + CPU);
     } else if (Random === 1){
-         CPU = "Paper";
-        document.write("It threw a  "+ CPU);}
+         CPU = "Paper";}
+     //   document.write("It threw a  "+ CPU);}
     else if(Random === 2){
-         CPU = "Scissors";
-        document.write("It threw a "+ CPU);}
+         CPU = "Scissors";}
+      //  document.write("It threw a "+ CPU);}
     return CPU;
     }
     
-    document.addEventListener('submit',cpThrow()).write(CPU);
+    document.addEventListener('submit',cpThrow()).write("W  "+ wins+ "L " +losses+ "T  "+ ties);
     
 
 
