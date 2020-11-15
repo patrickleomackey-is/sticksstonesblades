@@ -1,4 +1,6 @@
-
+let losses,wins,ties;
+ document.write("<br>W's = "+wins+"<br>T's = "+ties+"<br>L's = "+losses);
+   
 function cpThrow(){ 
     
     
@@ -26,37 +28,39 @@ function cpThrow(){
 
 function PlayTheGame() {
 //declare variables to hold the player choice and the computer choice
- losses =[];ties =[]; wins=[];
+
 var userThrow = document.getElementsByName("choice");
 
 for (i =0;i < userThrow.length; i++){
     if (userThrow[i].checked === true){
      urChoice = userThrow[i].value;   }}
-     
+      losses =[];
+      wins =[];
+      ties=[];
+      
 
-if (urChoice === CPU){alert ("tie "+CPU+" was thrown by your opponent!");ties++;}
+if (urChoice === CPU){alert ("tie "+CPU+" was thrown by your opponent!");return ties++;}
 
 else if (urChoice ==="Rock" && CPU ==="Paper"){alert(CPU+ " covers "+urChoice+ " you lost\n\
-this time");++losses;}
+this time");return losses++;}
     
 else if (urChoice ==="Rock" && CPU ==="Scissors"){alert("Your "+urChoice+" smashes \n\
-the opponent's "+CPU);++wins;} 
+the opponent's "+CPU);return wins++;} 
     
 else if (urChoice ==="Paper"&& CPU ==="Scissors"){alert("The opponent's "+CPU+" shreds\n\
-your "+urChoice);++losses;}
+your "+urChoice);return losses++;}
     
 else if (urChoice ==="Paper"&& CPU ==="Rock"){alert("Your "+urChoice+ " envelopes \n\
-the opponent's "+CPU);++wins;}
+the opponent's "+CPU);return wins++;}
 
 else if (urChoice ==="Scissors"&& CPU ==="Rock"){alert("Your "+urChoice+" was \n\
-crushed by the opponent's "+CPU);++losses;}
+crushed by the opponent's "+CPU);outcome = losses++;return outcome;}
     
 else if (urChoice ==="Scissors"&& CPU ==="Paper"){alert("Your "+urChoice+" chops up \n\
-the opponent's "+CPU);++wins;}    
+the opponent's "+CPU);return wins++;}    
 
 
 
-document.addEventListener('submit').write('<br>'+wins+"<br>"+losses+"<br>"+ties);
 //    document.write("<br>W's "+wins+"<br>Ties "+ties+"<br>L's "+losses);
 //use getElementsByName to get the form radio button values
 //loop through the array to find which one is checked
